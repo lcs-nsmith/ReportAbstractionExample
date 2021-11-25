@@ -16,10 +16,19 @@ struct ReportDetailView: View {
     var body: some View {
         VStack (spacing:10) {
             Text(thisReport.name)
-            
-            Text("\(thisReport.grade)")
+                .font(.title)
+                .fontWeight(.thin)
+                .padding(.trailing, 420)
                  
                  Text(thisReport.comment)
+                    .fontWeight(.semibold)
+                    .padding(.horizontal, 90)
+                    .lineSpacing(7)
+            
+            Text("\(thisReport.grade)")
+                .frame(alignment: .trailing)
+                .padding(.leading, 550)
+                .font(.callout)
         }
     }
 }
@@ -27,8 +36,6 @@ struct ReportDetailView: View {
 struct ReportDetailView_Previews: PreviewProvider {
     static var previews: some View {
         // For the "thisReport" parameter, we supply, as an argument, the first item from the listOfReports
-        Group {
             ReportDetailView(thisReport: listOfReports.first!)
-        }
     }
 }
