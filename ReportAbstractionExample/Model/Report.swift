@@ -7,13 +7,25 @@
 
 import Foundation
 
-struct Report {
+struct Report: Identifiable {
+    
+    // MODEL
+    // Simplu a description of tne data tnat our appp need to show
+    //"report"conforms to the Identifiable protocol... this just means that we promise to include an "id" property that will contain a unique indentifier
     
     let name: String
     let grade: Int
     let comment: String
     
+    // MARK: Stored Properties
+    // THis property is autonatically given a value
+    // The = is and assingment, it is getting an Instance of the UUID structure
+    let id = UUID()
+    
 }
+
+// Stroring the Data that won't cahgne  
+//
 
 let listOfReports = [
     Report(name: "Bethany Barr",
