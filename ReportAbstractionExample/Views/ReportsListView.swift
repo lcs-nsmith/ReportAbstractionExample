@@ -18,7 +18,12 @@ struct ReportsListView: View {
             // The ForEach , with each loop or iteration, places aπ new item from the list into "currentReport"
             
             ForEach(listOfReports) { currentReport in
-                Text(currentReport.name)
+                
+                NavigationLink(destination: {
+                    ReportDetailView(thisReport: currentReport)
+                }, label: {
+                    Text(currentReport.name)
+                })
             }
         }
         .navigationTitle("Reports")
