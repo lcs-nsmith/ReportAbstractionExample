@@ -24,7 +24,7 @@ struct Report: Identifiable {
     
 }
 
-// Stroring the Data that won't cahgne  
+// Stroring the Data that won't change
 //
 
 let listOfReports = [
